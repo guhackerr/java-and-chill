@@ -1,4 +1,4 @@
-package kelvyn.dev.javaandchill.database.entity;
+package kelvyn.dev.javaandchill.database.model;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

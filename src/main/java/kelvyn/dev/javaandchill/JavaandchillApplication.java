@@ -9,5 +9,5 @@ public class JavaandchillApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(JavaandchillApplication.class, args);
 	}
-
+	
 }
