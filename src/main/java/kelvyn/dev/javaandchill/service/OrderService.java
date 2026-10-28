@@ -1,5 +1,7 @@
 package kelvyn.dev.javaandchill.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import kelvyn.dev.javaandchill.database.model.Order;
@@ -19,5 +21,13 @@ public class OrderService {
 
     public Order orderFind(Long id) throws NotFoundException{
         return orderRepository.findById(id).orElseThrow( () -> new NotFoundException("Não foi possivel encontrar"));
+    }
+
+    public List<Order> orderFindAll(){
+        return orderRepository.findAll();
+    }
+
+    public void orderDelete(Long id){
+        orderRepository.deleteById(id);
     }
 }
