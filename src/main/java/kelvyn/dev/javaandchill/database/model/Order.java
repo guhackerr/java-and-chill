@@ -33,7 +33,10 @@ public class Order{
     }
 
     public BigDecimal totalPrice(){
-        return items.stream().map(item -> item.getUnityPrice().multiply(BigDecimal.valueOf(item.getQuantity()))).reduce(BigDecimal.ZERO, BigDecimal::add);
-    }
+        return items.stream()
+        .map(item -> item.getUnityPrice()
+        .multiply(BigDecimal.valueOf(item.getQuantity())))
+        .reduce(BigDecimal.ZERO, (total, price) -> total.add(price));
+    } 
 
 }
